@@ -4,6 +4,7 @@ import { IoMdHome } from "react-icons/io";
 import { AiFillPieChart } from "react-icons/ai";
 import { RiChatSmileFill } from "react-icons/ri";
 import { FaWallet } from "react-icons/fa6";
+import Link from "next/link";
 
 const iconsList = [
   {
@@ -14,6 +15,7 @@ const iconsList = [
       />
     ),
     label: "Home",
+    link: "/",
   },
   {
     icon: (
@@ -23,6 +25,7 @@ const iconsList = [
       />
     ),
     label: "Statistics",
+    link: "#",
   },
   {
     icon: (
@@ -32,6 +35,7 @@ const iconsList = [
       />
     ),
     label: "Chat",
+    link: "#",
   },
   {
     icon: (
@@ -41,15 +45,18 @@ const iconsList = [
       />
     ),
     label: "Wallet",
+    link: "#",
   },
 ];
 
 const MobileNav = () => {
   const [isIconActive, setIsIconActive] = useState(null);
+  
 
-  const handleSetIconActive = (index:any) => {
+  const handleSetIconActive = (index: any) => {
     setIsIconActive(index);
   };
+
   return (
     <div className="bg-[#3226AE] rounded-t-[60px] fixed bottom-0 left-0 right-0">
       <div className="px-10">
@@ -67,7 +74,7 @@ const MobileNav = () => {
                       : ""
                   }
                 >
-                  {icon.icon}
+                  <Link href={icon.link}>{icon.icon}</Link>
                 </button>
               </div>
             </div>
