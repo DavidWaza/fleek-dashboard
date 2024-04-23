@@ -30,7 +30,7 @@ const transactionHistory = [
 const MobileTransactionComponent = () => {
   return (
     <div>
-      <div className="w-full px-10  h-full rounded-xl">
+      <div className="w-full px-10 pb-20 h-full rounded-xl">
         <div className="flex justify-end py-10 px-5 text-black">
           <LuPencilLine className="text-[#CCCBDC]" />
         </div>
