@@ -1,9 +1,9 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { IoMdHome } from "react-icons/io";
 import { AiFillPieChart } from "react-icons/ai";
 import { RiChatSmileFill } from "react-icons/ri";
 import { FaWallet } from "react-icons/fa6";
-import Image from "next/image";
 
 const iconsList = [
   {
@@ -45,14 +45,30 @@ const iconsList = [
 ];
 
 const MobileNav = () => {
+  const [isIconActive, setIsIconActive] = useState(null);
+
+  const handleSetIconActive = (index:any) => {
+    setIsIconActive(index);
+  };
   return (
     <div className="bg-[#3226AE] rounded-t-[60px] fixed bottom-0 left-0 right-0">
       <div className="px-10">
-        <div className="flex gap-10 justify-center">
+        <div className="flex gap-[4rem] justify-center">
           {iconsList.map((icon, index) => (
             <div key={index} className="py-5">
-              <div className="hover:bg-white hover:px-10 hover:py-7 hover:rounded-2xl text-center transition-all ease-in-out group flex justify-center ">
-                <button>{icon.icon}</button>
+              <div
+                className={`text-center transition-all ease-in-out group flex justify-center`}
+              >
+                <button
+                  onClick={() => handleSetIconActive(index)}
+                  className={
+                    isIconActive === index
+                      ? "bg-white px-7 py-4 rounded-lg absolute -top-8"
+                      : ""
+                  }
+                >
+                  {icon.icon}
+                </button>
               </div>
             </div>
           ))}
