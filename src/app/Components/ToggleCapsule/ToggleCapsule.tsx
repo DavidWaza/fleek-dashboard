@@ -30,7 +30,7 @@ const ToggleCapsule = () => {
         <div className="flex">
           <button
             className={`bg-white p-4 flex justify-center shadow-lg rounded-lg transition-all ease-in-out w-[5rem] ${
-              activeChart ? "bg-[#00C3F8]" : ""
+              activeChart ? "!bg-[#00C3F8]" : ""
             }`}
             onClick={handleChartToggle}
           >
@@ -40,7 +40,7 @@ const ToggleCapsule = () => {
           </button>
           <button
             className={`bg-white p-4 flex justify-center shadow-lg transition-all ease-in-out rounded-lg w-[5rem] ${
-              activeTransaction ? "bg-[#00C3F8]" : ""
+              activeTransaction ? "!bg-[#00C3F8]" : ""
             }`}
             onClick={handleTransactionToggle}
           >
