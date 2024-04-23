@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Sidebar from "./Components/Sidebar/Sidebar";
+import BottomMobileNav from "./Components/Header/MobileNav/BottomMobileNav";
+import TopMobileNav from "./Components/Header/MobileNav/TopMobileNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +19,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`flex lg:gap-20 h-full`}>
+        <div className="md:block hidden">
+          <Sidebar />
+        </div>
+        <div className="md:hidden block">
+          <TopMobileNav />
+          <BottomMobileNav />
+        </div>
+        <main className="bg-white py-10 w-full overflow-visible lg:ml-[7rem]">{children}</main>
+      </body>
     </html>
   );
 }
