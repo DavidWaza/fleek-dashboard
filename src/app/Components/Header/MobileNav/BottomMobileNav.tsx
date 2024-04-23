@@ -63,7 +63,7 @@ const MobileNav = () => {
                   onClick={() => handleSetIconActive(index)}
                   className={
                     isIconActive === index
-                      ? "bg-white px-7 py-4 rounded-lg absolute -top-8"
+                      ? "bg-white px-5 py-4 rounded-lg absolute -top-8"
                       : ""
                   }
                 >
