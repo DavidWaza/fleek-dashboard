@@ -29,8 +29,8 @@ const cardList: cardListProps[] = [
 ];
 const TrioCard = () => {
   return (
-    <div>
-      <div className="grid grid-cols-3 gap-10">
+    <div className="xl:p-0 px-5">
+      <div className="grid grid-cols-3 gap-3 xl:gap-10">
         {cardList.map((list, index) => (
           <div key={index}>
             <Card

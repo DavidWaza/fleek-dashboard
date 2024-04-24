@@ -4,6 +4,7 @@ import { BsFillBarChartFill } from "react-icons/bs";
 import { BsFillPostcardFill } from "react-icons/bs";
 import TransactionComponent from "../TransactionComponent/TransactionComponent";
 import MobileTransactionComponent from "../TransactionComponent/MobileTransactionComponent";
+import MobileChartContent from "../MobileChartContent/MobileChartContent";
 
 const ToggleCapsule = () => {
   const [activeChart, setActiveChart] = useState(false);
@@ -52,11 +53,16 @@ const ToggleCapsule = () => {
           </button>
         </div>
       </div>
-      {userTransactionToggle && (
+      {userTransactionToggle ? (
         <div className="w-full ">
+          <h1 className="text-[#4022AA] text-2xl font-bold text-center">
+            Total Sales
+          </h1>
           <MobileTransactionComponent />
         </div>
-      )}
+      ) : chartToggle ? (
+        <MobileChartContent />
+      ) : null}
     </div>
   );
 };
