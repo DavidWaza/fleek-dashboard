@@ -10,53 +10,29 @@ import Link from "next/link";
 
 const Sidebar = () => {
   const pathname = usePathname();
-  const [isColorActive, setIsColorActive] = useState("text-[#857ECE]");
+  const [activeIcon, setActiveIcon] = useState(null);
 
-  const handleColorActive = () => {
-setIsColorActive('text-[#FC392F]')
-  }
+  const handleIconClick = (index: any) => {
+    setActiveIcon(index);
+  };
   const iconsList = [
     {
-      icon: (
-        <IoMdHome
-          size={27}
-          className={''}
-          onClick={handleColorActive}
-        />
-      ),
+      icon: <IoMdHome size={27} />,
       label: "Home",
       link: "/",
     },
     {
-      icon: (
-        <AiFillPieChart
-          size={27}
-          className={''}
-          onClick={handleColorActive}
-        />
-      ),
+      icon: <AiFillPieChart size={27} />,
       label: "Statistics",
       link: "/statistics",
     },
     {
-      icon: (
-        <RiChatSmileFill
-          size={27}
-          className={''}
-          onClick={handleColorActive}
-        />
-      ),
+      icon: <RiChatSmileFill size={27} />,
       label: "Chat",
       link: "/chat",
     },
     {
-      icon: (
-        <FaWallet
-          size={27}
-          className={''}
-          onClick={handleColorActive}
-        />
-      ),
+      icon: <FaWallet size={27} />,
       label: "Wallet",
       link: "/wallet",
     },
@@ -84,7 +60,10 @@ setIsColorActive('text-[#FC392F]')
                       pathname === icon.link
                         ? "bg-white ml-20 shadow-lg text-[#FC392F]"
                         : ""
+                    } ${
+                      activeIcon === index ? "text-[#fc392f]" : "text-[#857ece]"
                     }`}
+                    onClick={() => handleIconClick(index)}
                   >
                     {icon.icon}
                   </button>
