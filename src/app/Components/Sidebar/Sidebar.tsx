@@ -47,7 +47,7 @@ const Sidebar = () => {
             height={0}
             width={0}
             sizes="100vw"
-            className="w-full h-auto object-cover object-center pt-12"
+            className="w-full h-auto object-contain object-center pt-12"
           />
         </div>
         <div className="py-[10rem]">
