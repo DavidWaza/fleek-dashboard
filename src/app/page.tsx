@@ -32,7 +32,7 @@ export default function Home() {
       </div>
 
       {/* Mobile */}
-      <div className="md:hidden block bg-[#F9F8FF] -mt-10">
+      <div className="xl:hidden block bg-[#F9F8FF] -mt-10">
         <ToggleCapsule />
       </div>
     </main>

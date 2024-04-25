@@ -20,10 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`flex lg:gap-20 h-full`}>
-        <div className="md:block hidden">
+        <div className="xl:block hidden">
           <Sidebar />
         </div>
-        <div className="md:hidden block">
+        <div className="xl:hidden block">
           <TopMobileNav />
           <BottomMobileNav />
         </div>
