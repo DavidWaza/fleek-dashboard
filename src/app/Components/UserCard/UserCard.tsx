@@ -45,7 +45,7 @@ const UserCard = () => {
           {personalCardIconList.map((x, index) => (
             <div className="flex gap-3" key={index}>
               {x.icon}
-              <p className="text-[#605F71] text-sm lg:text-lg">{x.consumer}</p>
+              <p className="text-[#605F71]">{x.consumer}</p>
             </div>
           ))}
         </div>

@@ -27,7 +27,7 @@ export default function RootLayout({
           <TopMobileNav />
           <BottomMobileNav />
         </div>
-        <main className="bg-white py-10 w-full overflow-visible lg:ml-[7rem]">{children}</main>
+        <main className="bg-white py-10 w-full overflow-visible lg:ml-[5rem]">{children}</main>
       </body>
     </html>
   );

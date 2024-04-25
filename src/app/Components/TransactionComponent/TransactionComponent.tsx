@@ -30,11 +30,11 @@ const transactionHistory = [
 const TransactionComponent = () => {
   return (
     <div>
-      <div className="w-full bg-[#F9F8FF] h-screen px-10 justify-end ml-auto rounded-xl">
+      <div className="w-full bg-[#F9F8FF] h-full px-10 justify-end ml-auto rounded-xl">
         <div className="flex justify-end py-10 px-5 text-black">
           <LuPencilLine className="text-[#CCCBDC]" />
         </div>
-        <div className="ml-auto flex justify-center bg-[#3A24AC] rounded-xl py-4 px-6 w-[6rem] shadow-xl">
+        <div className="absolute right-10 flex justify-center bg-[#3A24AC] rounded-xl py-4 px-6 w-[6rem] shadow-xl">
           <p className="">$10,660</p>
         </div>
         <div className="flex justify-center items-center">

@@ -15,7 +15,7 @@ export default function Home() {
           <DesktopHeader />
         </div>
         <div className="xl:block hidden">
-          <div className="grid grid-cols-3 gap-10 py-20">
+          <div className="grid grid-cols-3 gap-10 py-10">
             <div className="col-span-2">
               <TrioCard />
               <Maingraph />

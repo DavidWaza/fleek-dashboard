@@ -38,9 +38,7 @@ const TrioCard = () => {
               img={list.img}
               tally={list.tally}
               className={
-                list.consumer.includes("orders")
-                  ? "bg-[#FF392C] text-white"
-                  : "text-black"
+                `text-black hover:bg-[#FF392C] hover:text-white transition-all ease-in-out`
               }
             />
           </div>
