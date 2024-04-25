@@ -14,6 +14,7 @@ const LineGraph = () => {
   const options = {
     title: "Spent Time",
     curveType: "function",
+    responsive:true,
   
     colors: ['red'],
     hAxis: {

@@ -12,12 +12,16 @@ const Sidebar = () => {
   const pathname = usePathname();
   const [isColorActive, setIsColorActive] = useState("text-[#857ECE]");
 
+  const handleColorActive = () => {
+setIsColorActive('text-[#FC392F]')
+  }
   const iconsList = [
     {
       icon: (
         <IoMdHome
           size={27}
-          className={isColorActive ? "text-[#FC392F]" : "text-[#857ECE]"}
+          className={''}
+          onClick={handleColorActive}
         />
       ),
       label: "Home",
@@ -27,7 +31,8 @@ const Sidebar = () => {
       icon: (
         <AiFillPieChart
           size={27}
-          className={!isColorActive ? "text-[#FC392F]" : "text-[#857ECE]"}
+          className={''}
+          onClick={handleColorActive}
         />
       ),
       label: "Statistics",
@@ -37,7 +42,8 @@ const Sidebar = () => {
       icon: (
         <RiChatSmileFill
           size={27}
-          className={!isColorActive ? "text-[#FC392F]" : "text-[#857ECE]"}
+          className={''}
+          onClick={handleColorActive}
         />
       ),
       label: "Chat",
@@ -47,7 +53,8 @@ const Sidebar = () => {
       icon: (
         <FaWallet
           size={27}
-          className={!isColorActive ? "text-[#FC392F]" : "text-[#857ECE]"}
+          className={''}
+          onClick={handleColorActive}
         />
       ),
       label: "Wallet",

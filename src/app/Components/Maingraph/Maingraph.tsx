@@ -29,10 +29,10 @@ const options = {
   backgroundColor: "#f9f8ff",
   candlestick: {
     fallingColor: {
-      strokeWidth: 1, // Adjust the stroke width for falling candlesticks
+      strokeWidth: 1, 
     },
     risingColor: {
-      strokeWidth: 1, // Adjust the stroke width for rising candlesticks
+      strokeWidth: 1, 
     },
   },
 };

@@ -58,7 +58,7 @@ const MobileNav = () => {
   };
 
   return (
-    <div className="bg-[#3226AE] rounded-t-[60px] fixed bottom-0 left-0 right-0">
+    <div className="bg-[#3226AE] rounded-t-[60px] fixed z-30 bottom-0 left-0 right-0">
       <div className="px-10">
         <div className="flex gap-[4rem] justify-center">
           {iconsList.map((icon, index) => (
